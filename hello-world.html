@@ -1,0 +1,29 @@
+<html>
+    <head> 
+    <title> Hello World</title>
+    </head>
+      <style> </style>    
+    <script lang="javascript">
+    function showMsg(){
+       var v= document.getElementById("first name");
+       var v1= document.getElementById("second name");
+        var v2= document.getElementById("roll number");
+        alert("hi"+ " " +v.value+ " "+v1.value+"your roll number is"+v2.value);
+    }
+    </script>
+          <body>
+            <div style="color: green;font-size: 20px;margin-left: 10px">
+                <span style="margin-left: 5px">First Name </span>
+                <input type="text" id="first name"/> 
+              </div>
+              <div style="color: green;font-size: 20px;margin-left: 10px">
+                <span style="margin-left: 5px">Second Name </span>
+                <input type="text" id="second name"/> 
+              </div>
+              <div style="color: green;font-size: 20px;margin-left: 10px">
+                <span style="margin-left: 5px">Roll Number </span>
+                <input type="number" id="roll number"/> 
+              </div>
+              <button value="print" onclick="showMsg()">Print</button>
+    </body>
+</html>
