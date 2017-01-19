@@ -1,0 +1,131 @@
+<htm>
+    <head>
+        <title> Student Percentage Calculator </title>
+    </head>
+    <style>
+       
+    </style>
+    <script type="text/javascript" src="jquery.js">
+    </script>
+
+    <script lang="text/javascript">
+      function calculateM()
+        {
+            var name=$('#name').val();
+            var rollno=$('#rollno').val();
+            var maths=parseInt($('#maths').val());
+            var english=parseInt($('#English').val());
+            var science=parseInt($('#Science').val());
+            var hindi=parseInt($('#Hindi').val());
+            var msg=$('#msg');
+            var percentage= ((maths+english+science+hindi)/400)*100;
+            if(percentage<=100 && percentage>90)
+                {
+              msg.css('background-color' , 'Blue');
+              msg.text('Hello '+name +' You have Excelled '+' percetage is '+percentage);
+            //        alert('Excellent');
+                }
+            else if(percentage>=80 && percentage<90)
+                {
+                msg.css('background-color' , 'green');
+
+                msg.text('Very Good');     
+               //     alert('Very Good');
+
+                }
+            else if(percentage>=70 && percentage<80)
+                {
+                msg.css('background-color' , 'blue');
+
+                msg.text('Good');      
+               //     alert('Good');
+
+                }
+            else
+                {
+             msg.css('background-color' , 'red');
+
+               msg.text('You are Fail');    
+                    //alert('fail');
+
+                }
+        }
+  
+    </script>
+
+    <body>
+        <h1 style="margin-left: 450px; "> STUDENT PERCENTAGE CALCULATOR </h1>
+        <table>
+            <tr>
+                <td>
+        <label> Name </label>
+                </td>
+                <td>
+        <input type="text" id="name"/><br/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+        <label> Roll No</label>
+                </td>
+                <td>
+        <input type="number" id="rollno"/>
+                </td>
+            </tr>
+            <tr>
+            <td>
+                <span> Marks </span> <input type="checkbox" onclick="$('#Marks').toggle();"/> 
+                </td>
+            </tr>
+            
+       
+        
+        
+        <table id="Marks" style="border: 2px solid black;margin-top: 15px;padding: 10px; display: none;">
+        <tr>
+            <td>
+                <div> Maths </div>
+            </td>
+            <td>
+            <input type='number' id='maths'/>
+            </td>
+            </tr>
+         <tr>
+            <td>
+                <div> English </div>
+            </td>
+            <td>
+            <input type='number' id="English"/>
+            </td>
+            </tr>
+         <tr>
+            <td>
+                <div> Science </div>
+            </td>
+            <td>
+            <input type='number' id="Science"/>
+            </td>
+            </tr>
+         <tr>
+            <td>
+                <div> Hindi </div>
+            </td>
+            <td>
+            <input type='number' id="Hindi"/>
+            </td>
+            </tr>
+            <br/>
+            <tr>
+            <td>
+                
+                <button type='button' onclick="calculateM()"> Calculate Percentage </button>
+                
+                </td>
+            </tr>
+        
+        </table>
+             </table>
+        <br/>
+        <div id='msg'></div>
+    </body>
+</htm>

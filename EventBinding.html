@@ -1,0 +1,37 @@
+<htm>
+    <head>
+        <title> Event Binding </title>
+    </head>
+    <style>
+       
+    </style>
+    <script type="text/javascript" src="jquery.js">
+    </script>
+
+    <script lang="text/javascript">
+        function addEvent()
+        {
+            var eventClick=$('#EventChkBind').is(':checked');
+            if(eventClick)
+                {
+                    $('#button1').on('click',function(){
+                        alert('Hello from button 1');
+                    });
+                }
+//            else{
+//                $('#button1').off('click');
+//
+//            }
+        }
+        
+    </script>
+
+    <body>
+        <input type="checkbox" onclick="addEvent() " id='EventChkBind'/>
+        <label> Bind event to Button1</label> <br/><br/>
+        
+        <button id="button1"> Button1 </button>
+        
+        
+    </body>
+</htm>

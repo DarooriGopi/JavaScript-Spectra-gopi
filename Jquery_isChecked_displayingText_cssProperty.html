@@ -1,0 +1,44 @@
+<htm>
+    <head>
+        <title>Jquery Assignment1</title>
+    </head>
+    <style>
+       
+    </style>
+    <script type="text/javascript" src="jquery.js">
+    </script>
+
+    <script lang="text/javascript">
+        function ageVerification(){
+            var name=$('#name').val();
+            var isAbove18=$('#above18').is(':checked');
+            if(isAbove18)
+                {
+                    $('#msg').css('background-color','green');
+                    $('#msg').html('Hello ' +name+ ' you are eligible for voting');
+//                     $('#msg').text('Hello ' +name+ ' you are eligible for voting');
+                }
+            else
+            {
+            $('#msg').css('background-color','red');
+           $('#msg').html('Hello ' +name+ ' you are not eligible for voting');  
+//           $('#msg').text('Hello ' +name+ ' you are not eligible for voting');    
+            }
+        }
+    
+    </script>
+
+    <body>
+        <label> Name </label>
+        <input type="text" id="name"/> <br><br>
+        
+        <input type="checkbox" id="above18"/>
+        
+        <span> verify the age if you are above 18</span> <br><br>
+         
+        <button type="Verify" onclick="ageVerification()"> Verify </button><br><br>
+        
+        <span id="msg"> </span>
+        
+    </body>
+</htm>
