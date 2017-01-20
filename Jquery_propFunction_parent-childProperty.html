@@ -1,0 +1,89 @@
+<htm>
+    <head>
+        <title> Parent-Child-Prop </title>
+    </head>
+    <style>
+       
+    </style>
+    <script type="text/javascript" src="jquery.js">
+    </script>
+
+    <script lang="text/javascript">
+        checked=false;
+        function checkUncheckAll()
+        {
+            checked=!checked;
+            $('input[type=checkbox]').prop('checked',checked);
+            if(checked)
+                {
+            $('#selectUnselectBtn').text('unSelectAll');
+                }
+            else
+            {
+             $('#selectUnselectBtn').text('SelectAll');
+
+            }
+        }
+        
+        function hideAll()
+            {
+                $('#showHideAll').parents().toggle();
+
+            }
+    </script>
+
+    <body>
+       
+        <table>
+        <tr>
+            <th>
+                <button type="button" id="selectUnselectBtn" onclick="checkUncheckAll()" > SelectAll </button>
+            </th>
+            <th>
+            
+            <button type="button" id="showHideAll" onclick="hideAll()"> HideALL </button>
+            </th>
+                    
+        </tr>
+            <table>
+                <tr><br/>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+
+            <span> Gopi </span>
+                    </td>
+            </tr> 
+                 <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+
+            <span> Ramu </span>
+                    </td>
+            </tr> 
+                  <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+
+            <span> Sai </span>
+                    </td>
+            </tr> 
+                  <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+
+            <span> Bittu </span>
+                    </td>
+            </tr> 
+        </table>
+        </table>
+
+    </body>
+</htm>
