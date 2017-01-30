@@ -1,0 +1,130 @@
+<htm>
+    <head>
+        <title> Parent-Child-Example-2 </title>
+    </head>
+    <style>
+       
+    </style>
+    <script type="text/javascript" src="jquery.js">
+    </script>
+
+    <script lang="text/javascript">
+        clicked=false;
+           function checkUncheckBtn()
+        {
+            clicked=!clicked;
+        
+        var msg=$('#table1').prop('clicked',clicked);
+            msg.toggle();
+            if(clicked)
+                {
+            $('#showHideBtn').text('HideButtons');
+                }
+            else
+            {
+          $('#showHideBtn').text('ShowButtons');
+
+            }
+        }
+        clicked=false;
+        function checkUncheckTextBoxex()
+        {
+            clicked=!clicked;
+            $('#table2').prop('clicked',clicked).toggle();
+            if(clicked)
+                {
+                    $('#showHideText').text('HideTextBoxes');
+                }
+            else
+                {
+                    $('#showHideText').text('ShowTextBoxes');
+
+                }
+        }
+        
+    </script>
+
+    <body>
+       
+        <table>
+            <tbody>
+<!--
+                <th>
+                    <button  type="button"   id="showHideBtn" onclick="checkUncheckBtn()"> ShowButtons </button>
+                </th>
+                <th>
+            <button  type="button" id="showHideText" onclick="checkUncheckTextBoxex()"  style="margin-left: 170px;"/> ShowTextBoxes
+                </th>
+-->
+                
+                <tr>
+            <td>
+                 
+                <table id="table1" style=" margin-top: 50px;margin-left: 10px;display:none;">
+                
+                 <tr>
+                     <td>
+            <button type="button"/> Button1
+                    </td>
+                </tr>
+                
+              <tr>
+                     <td>
+            <button type="button"/> Button2
+                    </td>
+                </tr>
+                <tr>
+                     <td>
+            <button type="button"/> Button3
+                    </td>
+                </tr>
+                <tr>
+                     <td>
+            <button type="button"/> Button4
+                    </td>
+                </tr>
+                <tr>
+                     <td>
+            <button type="button"/> Button5
+                    </td>
+                </tr>
+                 
+                        </table>
+                </td>
+                    <td>
+  <table id='table2' style=" margin-top: 50px;margin-left: 186px;display:none;">
+                
+                 <tr>
+                     <td>
+            <input placeholder="TextBox1" type="text"/>
+                    </td>
+                </tr>
+                
+              <tr>
+                     <td>
+           <input placeholder="TextBox2" type="text"/>
+                  </td>
+                </tr>
+                <tr>
+                     <td>
+            <input placeholder="TextBox3" type="text"/>
+                    </td>
+                </tr>
+                <tr>
+                     <td>
+            <input placeholder="TextBox4" type="text"/>
+                    </td>
+                </tr>
+                <tr>
+                     <td>
+            <input placeholder="TextBox5" type="text"/>
+                    </td>
+                </tr>
+                 
+                        </table>
+                        </td>
+                    </tr>
+</tbody>  
+        </table>
+    </body>
+</htm>
